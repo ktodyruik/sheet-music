@@ -2,6 +2,13 @@
   title = "Dona Nobis Pacem"
   subtitle = "3-part"
   composer = "Anonymous"
+  % Do not display the default LilyPond footer for this book
+  tagline = ##f  
+}
+
+\paper {
+  #(set-paper-size "letter")
+  ragged-bottom = ##t
 }
 
 flute = \relative \repeat volta 2 {
@@ -47,23 +54,58 @@ cello = \relative {
     instrumentName = #"Flute"
   }
   {
-  \tempo Adagio
-  \clef treble
-  \key g \major
-  \time 3/4
-  \flute
+    \tempo Adagio
+    \clef treble
+    \key g \major
+    \time 3/4
+    \flute
   }
   \new Staff
   \with {
     instrumentName = #"Cello"
   }
   {
-  \clef bass
-  \key g \major  
-  \cello
+    \clef bass
+    \key g \major  
+    \cello
   }
 >>
-
   \layout {}
   \midi {}
+}
+
+\pageBreak
+
+\score {
+  \new Staff
+  \with {
+    instrumentName = #"Flute"
+  }
+  {
+    \tempo Adagio
+    \clef treble
+    \key g \major
+    \time 3/4
+    \flute
+  }
+  \header {
+    piece = "Flute Part"
+  }
+}
+
+\score {
+\new Staff
+  \with {
+    instrumentName = #"Cello"
+  }
+  {
+    \tempo Adagio
+    \clef bass
+    \key g \major
+    \time 3/4
+    \cello
+  }
+  \header {
+    piece = "Cello Part"
+  }
 }
