@@ -41,11 +41,11 @@ flute = \relative \repeat volta 2 {
     g2.\fermata
 }
 
-
 cello = \relative {
     { \transpose c c,, \flute }
  }
 
+\bookpart {
 
 \score {
 \new StaffGroup <<
@@ -74,7 +74,14 @@ cello = \relative {
   \midi {}
 }
 
-\pageBreak
+}
+
+\bookpart {
+
+\header {
+  title = "Dona Nobis Pacem"
+  subtitle = "3-part (Flute)"
+}
 
 \score {
   \new Staff
@@ -88,9 +95,15 @@ cello = \relative {
     \time 3/4
     \flute
   }
-  \header {
-    piece = "Flute Part"
-  }
+}
+
+}
+
+\bookpart {
+
+\header {
+  title = "Dona Nobis Pacem"
+  subtitle = "3-part (Cello)"
 }
 
 \score {
@@ -105,7 +118,6 @@ cello = \relative {
     \time 3/4
     \cello
   }
-  \header {
-    piece = "Cello Part"
-  }
+}
+
 }
