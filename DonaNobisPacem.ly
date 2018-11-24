@@ -26,7 +26,7 @@ flute = \relative \repeat volta 2 {
     b a2
     \break
     e'4 e2
-    d4 e2
+    d4 d2
     d8( c) b4( a--)
     b2.\fermata
     g2.^"3."
